@@ -1,5 +1,6 @@
 import 'package:biscuit/Screens/login_screen.dart';
 import 'package:biscuit/Screens/signup_screen.dart';
+import 'package:biscuit/Screens/splash_Screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(),
+      home: SplashScreen(),
     );
   }
 }
