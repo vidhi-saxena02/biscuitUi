@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../Screens/profile_screen.dart';
+
 class Button extends StatelessWidget {
   final String text;
   const Button({
@@ -10,21 +12,22 @@ class Button extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: () {},
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 8.0,horizontal: 18.0),
+    return ElevatedButton(
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (_)=> ProfileScreen()));
+        },
         child: Text(
-          text,
-          style: GoogleFonts.roboto(color: Colors.white,
-              fontSize: 18.0, fontWeight: FontWeight.bold),
+          'Log in',
+          style: GoogleFonts.aBeeZee(
+              color: Colors.white,
+              fontSize: 20.0,
+              fontWeight: FontWeight.w500),
         ),
-      ),style: TextButton.styleFrom(
-        backgroundColor: Colors.blue,
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12.0)
-        )
-    ),);
+        style: ElevatedButton.styleFrom(
+            padding: const  EdgeInsets.symmetric(vertical:8.0,horizontal: 30 ),
+            primary:  const Color(0xFF007AB9),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0),))
+    );
   }
 }
 
